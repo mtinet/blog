@@ -17,7 +17,7 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 address = "5, Deungyong-ro 8-gil, Dongjak-gu, Seoul, Republic of Korea"
 author = "Jason"
-author_image = "images/logo.png"
+author_image = "images/20200301_130952.jpg"
 bio = "Technology Teacher on S.Korea"
 contact_form_action = "https://script.google.com/macros/s/AKfycbxzqB7qZ1KSaXItVKrLyJz-NtUkUhUzuDTwyA5jr9uMnRFaROg/exec"
 copyright = "Copyright &copy; by [Jason](mtinet7979@gmail.com)"
