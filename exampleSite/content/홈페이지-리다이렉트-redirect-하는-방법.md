@@ -12,7 +12,7 @@ type = "post"
 
 홈페이지에 사람들이 접속하게 되면 자동으로 index.html 파일을 열도록 설정되어 있는데, 그 파일의 <head></head> 태그 사이에 아래 코드를 추가 하면 해당 주소로 자동 리다이렉트 된다.
 
-<meta http-equiv="refresh" content="3;url=[http://mtinet.netlify.com](http://mtinet.netlify.com "http://mtinet.netlify.com")" charset="utf-8" />
+    <meta http-equiv="refresh" content="3;url=http://mtinet.netlify.com" charset="utf-8" />
 
 예제 코드는 다음과 같다.
 
