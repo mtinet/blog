@@ -24,6 +24,16 @@
         <article class="content">
           <img src="{{.Params.Image | absURL }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
           {{.Content}}
+          
+          <!--댓글 utterances -->
+          <script src="https://utteranc.es/client.js"
+            repo="github.com/mtinet/blog_comments"
+            issue-term="title"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+          </script>
+          
         </article>
       </div>
       {{partial "sidebar.html" . }}
