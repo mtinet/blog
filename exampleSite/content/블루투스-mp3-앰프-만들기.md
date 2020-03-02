@@ -8,4 +8,10 @@ title = "블루투스 mp3 앰프 만들기"
 type = "post"
 
 +++
-이건 뭐 그냥 블루투스 mp3 모듈 사다가 조립만 하면 된다. 
+이건 뭐 그냥 블루투스 mp3 모듈 사다가 조립만 하면 된다.
+
+만드는 과정이 보고 싶다면.... 
+
+이리로..... 
+
+[https://photos.app.goo.gl/czzM4a2yD8PEsK2A7](https://photos.app.goo.gl/czzM4a2yD8PEsK2A7 "https://photos.app.goo.gl/czzM4a2yD8PEsK2A7")
