@@ -3,7 +3,7 @@ languageCode = "en-us"
 paginate = 6
 summaryLength = "10"
 theme = "parsa-hugo"
-title = "mtinet' personal site"
+title = "mtinet's story"
 [[menu.main]]
 URL = "about"
 name = "About"
