@@ -31,9 +31,3 @@ type = "post"
     </html>
 
 참고링크 : [https://www.tuwlab.com/ece/1987](https://www.tuwlab.com/ece/1987 "https://www.tuwlab.com/ece/1987")
-
-\`\`\`python
-
-def
-
-\`\`\`
