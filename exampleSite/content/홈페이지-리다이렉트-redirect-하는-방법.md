@@ -1,5 +1,5 @@
 +++
-categories = ["html"]
+categories = ["HTML"]
 date = 2020-03-01T15:00:00Z
 description = "홈페이지 주소가 여러개일 때 한 쪽 주소로 자동으로 이동하게 하는 방법"
 image = "/images/redirect.png"
