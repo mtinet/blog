@@ -49,10 +49,3 @@ consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porr
 ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
 labore et dolore magnam aliquam quaerat voluptatem.
 
-<script src="https://utteranc.es/client.js"
-        repo="https://github.com/mtinet/blog_comments"
-        issue-term="title"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
