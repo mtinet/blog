@@ -1,0 +1,72 @@
+baseURL = "https://mtinet.netlify.com"
+languageCode = "en-us"
+paginate = 6
+summaryLength = "10"
+theme = "parsa-hugo"
+title = "mtinet' personal site"
+[[menu.main]]
+URL = "about"
+name = "About"
+weight = 2
+[[menu.main]]
+URL = "contact"
+name = "Contact"
+weight = 3
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[params]
+address = "5, Deungyong-ro 8-gil, Dongjak-gu, Seoul, Republic of Korea"
+author = "Jason"
+author_image = "images/banner-img.png"
+bio = "Technology Teacher on S.Korea"
+contact_form_action = "https://script.google.com/macros/s/AKfycbxzqB7qZ1KSaXItVKrLyJz-NtUkUhUzuDTwyA5jr9uMnRFaROg/exec"
+copyright = "Copyright &copy; by [Jason](mtinet7979@gmail.com)"
+description = "This is meta description"
+email = "mtinet7979@gmail.com"
+google_analitycs_id = "Your ID"
+home = "Home"
+layout = "1"
+logo = "images/logo.png"
+mobile = "+82 10 9483 2362"
+[params.instafeed]
+access_token = "4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17"
+enable = true
+user_id = "4044026246"
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/headroom/headroom.js"
+[[params.plugins.js]]
+link = "plugins/instafeed/instafeed.min.js"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+[[params.plugins.js]]
+link = "plugins/smooth-scroll/smooth-scroll.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[params.preloader]
+enable = true
+[params.search]
+enable = true
+[[params.social]]
+URL = "https://www.facebook.com/mtinet"
+icon = "ti-facebook"
+[[params.social]]
+URL = "https://github.com/mtinet"
+icon = "ti-github"

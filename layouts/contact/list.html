@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="mb-4">{{.Title }}</h2>
+        <img src="{{.Params.Image | absURL }}" alt="{{.Site.Params.author}}" class="img-fluid w-100 mb-4">
+        {{ .Content }}
+        <form class = "gfrom" method="POST" action="{{ .Site.Params.contact_form_action }}" class="row mt-5">
+          <div class="col-lg-6">
+            <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+          </div>
+          <div class="col-lg-6">
+            <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email">
+          </div>
+          <div class="col-12">
+            <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary">Submit</button>
+          </div>         
+          
+          <div style="display:none" class="thankyou_message">
+           <!-- You can customize the thankyou message by editing the code below -->
+           <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+           </h2>
+            
+          </div>
+        </form>
+        
+        <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js">
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{partial "instafeed.html" . }}
+
+{{ end }}
+
+
