@@ -50,8 +50,8 @@ ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eiu
 labore et dolore magnam aliquam quaerat voluptatem.
 
 <script src="https://utteranc.es/client.js"
-        repo="[ENTER REPO HERE]"
-        issue-term="pathname"
+        repo="https://github.com/mtinet/blog_comments"
+        issue-term="title"
         theme="github-light"
         crossorigin="anonymous"
         async>
