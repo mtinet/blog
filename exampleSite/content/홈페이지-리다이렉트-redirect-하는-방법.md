@@ -2,7 +2,6 @@
 categories = ["html"]
 date = 2020-03-01T15:00:00Z
 description = "홈페이지 주소가 여러개일 때 한 쪽 주소로 자동으로 이동하게 하는 방법"
-draft = true
 image = "/images/redirect.png"
 tags = ["html", " redirect"]
 title = "홈페이지 리다이렉트(redirect) 하는 방법"
