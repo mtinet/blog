@@ -40,6 +40,14 @@ kv라는 파일로 따로 화면을 구성해서 불러오기도 하고, 그냥 
 
 [https://techwithtim.net/tutorials/kivy-tutorial/example-gui/](https://techwithtim.net/tutorials/kivy-tutorial/example-gui/ "https://techwithtim.net/tutorials/kivy-tutorial/example-gui/")
 
+공식사이트는 다음과 같으며, 
+
+[https://kivy.org](https://kivy.org/ "https://kivy.org/")
+
+기초 학습은 이곳에서 할 수 있다. 
+
+[https://kivy.org/doc/stable/guide/basic.html](https://kivy.org/doc/stable/guide/basic.html "https://kivy.org/doc/stable/guide/basic.html")
+
 또한, kivy는 크로스 플랫폼을 지원하는데, 윈도우, 리눅수, OS X, 안드로이드, iOS, 라즈비안에도 모두 동작한다. 앱으로 구동하는 kivy의 모습은 아래 링크에서 확인할 수 있다. 
 
 [http://wiznetacademy.com/wp/?p=7026](http://wiznetacademy.com/wp/?p=7026 "http://wiznetacademy.com/wp/?p=7026")
