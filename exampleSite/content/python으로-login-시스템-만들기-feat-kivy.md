@@ -2,7 +2,7 @@
 categories = ["login", "kivy", "python"]
 date = 2020-03-06T15:00:00Z
 description = "kivy라이브러리를 이용해 GUI형태의 로그인 창 만들기"
-image = "/images/스크린샷 2020-03-07 오전 12.47.54.png"
+image = "/images/kivy1.png"
 tags = ["python", "kivy", "login"]
 title = "python으로 login 시스템 만들기(feat.kivy)"
 type = "post"
