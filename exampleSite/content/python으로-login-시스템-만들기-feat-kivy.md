@@ -8,6 +8,26 @@ title = "python으로 login 시스템 만들기(feat.kivy)"
 type = "post"
 
 +++
+##### 설치
+
+* kivy 라이브러리 설치
+
+    pip install kivy
+
+* 파이썬 버전 업그레이드
+
+    python -m pip install --upgrade pip wheel setuptools
+
+* 기본 종속성 설치
+
+    python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+
+* GStreamer 기능 설치
+
+    python -m pip install kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple/
+
+##### 파일
+
 python과 kivy를 활용하면 아래 캡쳐와 같은 예쁜 로그인 페이지를 만들 수 있다. 기본 파일은 다음과 같다.
 
 main.py : 프로그램이 동작하도록 틀을 잡아주는 파일
@@ -18,21 +38,27 @@ my.kv : 디자인을 만들어주는 파일
 
 users.txt : 데이터베이스 파일에 의해 데이터가 저장되는 파일
 
+##### 사용방법
+
 계정이 있으면 로그인을 하고, 없으면 계정을 만드는 창으로 이동한다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy1.png?raw=true)  
+![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy1.png?raw=true)
 
 계정을 만들 수 있는 창에서 계정을 만들고 서밋을 하면 자동으로 로그인 창으로 이동한다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy2.png?raw=true)  
+![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy2.png?raw=true)
 
 로그인을 하고나면 로그인 정보를 확인할 수 있는 창을 보여준다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy3.png?raw=true)  
+![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy3.png?raw=true)
 
 만약 로그인 정보가 바르지 않으면 정보가 잘못되었음을 보여주는 팝업을 띄운다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy4.png?raw=true)  
+![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy4.png?raw=true)
+
+##### 소개
 
 사실 kivy는 Bay Area Flagship MakerFaire에서 본 Dos Pueblos Engineering Academy 학생들이 만든 작품들의 오퍼레이팅 화면을 보고 너무 깔끔하게 만들어놔서 어떻게 만들었는지 물어봐서 알게 되었었다. 하지만, 한국으로 돌아와서 한 번 자료를 찾아보았었지만, 마땅히 구동이 잘 안되서 미뤄두다가 다시 한 번 자료를 찾아봤는데, 그 새 많은 자료들이 만들어져 있는 것을 확인할 수 있게 되었다.
 
 kv라는 파일로 따로 화면을 구성해서 불러오기도 하고, 그냥 python파일에서 구동하기도 하는데, 어찌되었든 python으로 구현하는 GUI중에서는 가장 깔끔한 결과물을 보여주는 것 같아 소개한다.
+
+##### 참조
 
 이 예제는 아래 사이트에서 보고 테스트 해보았다.
 
