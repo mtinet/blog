@@ -30,7 +30,7 @@ logo = "images/logo.png"
 mobile = "+82 10 9483 2362"
 [params.instafeed]
 access_token = "4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17"
-enable = true
+enable = false
 user_id = "4044026246"
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
