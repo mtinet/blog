@@ -12,6 +12,7 @@ type = "post"
 
 C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
 
+
 ##### python에서 직접 설치 위치를 확인하는 방법
 
 ![](/images/locationCheck.png)
@@ -20,6 +21,8 @@ C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
     
     >>> import sys
     >>> sys.executable
+    
+
 
 ##### 폰트파일 저장 위치
 
@@ -32,6 +35,7 @@ kivy에서 한글을 사용하기 위해 폰트를 넣어놓을
 \-리눅스(라즈베리파이): /usr/local/lib/python3.4/dist-packages/kivy/data/fonts
 
 이 위치에 malgun.ttf, malgunbd.ttf 등의 폰트 파일을 갖다 놓는다.
+
 
 ##### 예제
 
