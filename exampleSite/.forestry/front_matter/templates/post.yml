@@ -27,6 +27,7 @@ fields:
   default: post
   description: 'type: post or featured'
 pages:
+- exampleSite/content/kivy-한글-폰트-설치하기.md
 - exampleSite/content/python으로-login-시스템-만들기-feat-kivy.md
 - exampleSite/content/python으로-그래프-그리기.md
 - exampleSite/content/동영상이-안달려.md
