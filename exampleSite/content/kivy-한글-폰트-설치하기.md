@@ -2,7 +2,7 @@
 categories = ["한글", "kivy", "python"]
 date = 2020-03-08T15:00:00Z
 description = "python GUI라이브러리인 kivy에서 한글이 나오게 하는 방법"
-image = ""
+image = "/images/locationCheck-1.png"
 tags = ["python", "kivy", "한글"]
 title = "kivy 한글 폰트 설치하기"
 type = "post"
