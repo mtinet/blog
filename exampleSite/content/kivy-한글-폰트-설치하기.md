@@ -12,16 +12,14 @@ type = "post"
 
 C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
 
-
 ##### python에서 직접 설치 위치를 확인하는 방법
+
 ![](/images/locationCheck.png)
 
     $python
     
     >>> import sys
     >>> sys.executable
-    
-
 
 ##### 폰트파일 저장 위치
 
@@ -35,7 +33,6 @@ kivy에서 한글을 사용하기 위해 폰트를 넣어놓을
 
 이 위치에 malgun.ttf, malgunbd.ttf 등의 폰트 파일을 갖다 놓는다.
 
-
 ##### 예제
 
     from kivy.app import App
@@ -48,7 +45,16 @@ kivy에서 한글을 사용하기 위해 폰트를 넣어놓을
     
     if __name__ == '__main__':
         TestApp().run()
-    
+
+##### 배포
+
+그나저나 pyinstaller를 설치하고 배포를 좀 해볼까 했더니만.... 테스트 파일은 잘 만들어지는데, kivy가 들어가 있는 파일은 아래와 같은 오류가 난다.
+
+![](/images/disterror.png)
+
+검색을 하다가 좀 더 아시는 분인 것 같아 물어봐놓은 상태..ㅠㅠ
+
+[https://hongku.tistory.com/338](https://hongku.tistory.com/338 "https://hongku.tistory.com/338")
 
 ##### 참조
 
