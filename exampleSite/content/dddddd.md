@@ -1,0 +1,15 @@
++++
+categories = ["Family"]
+date = 2020-03-01T15:00:00Z
+description = "그냥그냥그냥낫다"
+image = "/images/20200301_124835.jpg"
+tags = ["family", " 가족", "스펀지밥", "각서"]
+title = "그려그려 대한 단상"
+type = "post"
+
++++
+나보다 잘그리면 됐지 뭐 ㅋㅋㅋㅋ 색깔도 입히고\~
+
+![](/images/20200301_130952.jpg)
+
+dddddd
