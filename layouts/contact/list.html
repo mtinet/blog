@@ -47,20 +47,16 @@
         method: "POST",
         body: formData
       })
-      .then(response => response.json())  // ✅ JSON 응답 받기
-      .then(data => {
-        if (data.status === "success") {
-          alert("✅ 메일이 성공적으로 전송되었습니다!"); // ✅ 성공 메시지 표시 후
-          window.location.reload(); // ✅ Contact 페이지 새로고침
-        } else {
-          alert("❌ 메일 전송에 실패했습니다. 다시 시도해주세요.");
-        }
+      .then(() => {
+        alert("✅ 메일이 성공적으로 전송되었습니다!"); // ✅ 성공 메시지 표시
+        window.location.reload(); // ✅ Contact 페이지 새로고침
       })
-      .catch(error => {
-        alert("❌ 메일 전송 중 오류가 발생했습니다.");
+      .catch(() => {
+        alert("❌ 메일 전송에 실패했습니다. 다시 시도해주세요.");
       });
     });
   });
+
 </script>
 
 
