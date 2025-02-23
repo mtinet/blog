@@ -2,7 +2,7 @@
 categories = ["graph", "python"]
 date = 2020-03-01T15:00:00Z
 description = "파이썬으로 그래프를 그려보다."
-image = "/images/1101_temp.png"
+image = "/images/pythongraph/1101_temp.png"
 tags = ["python", "graph", "plt", "matplotlib", "csv"]
 title = "python으로 그래프 그리기"
 type = "post"
