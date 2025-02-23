@@ -2,7 +2,7 @@
 categories = ["programming"]
 date = 2020-03-08T15:00:00Z
 description = "python GUI라이브러리인 kivy에서 한글이 나오게 하는 방법"
-image = "/images/kivyKorean.png"
+image = "/images/kivykor/kivyKorean.png"
 tags = ["python", "kivy", "한글", "윈도우"]
 title = "kivy 한글 폰트 설치하기"
 type = "post"
@@ -14,7 +14,7 @@ C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
 
 ##### python에서 직접 설치 위치를 확인하는 방법
 
-![](/images/locationCheck.png)
+![](/images/kivykor/locationCheck.png)
 
     $python
     
@@ -50,7 +50,7 @@ kivy에서 한글을 사용하기 위해 폰트를 넣어놓을
 
 그나저나 pyinstaller를 설치하고 배포를 좀 해볼까 했더니만.... 테스트 파일은 잘 만들어지는데, kivy가 들어가 있는 파일은 아래와 같은 오류가 난다.
 
-![](/images/disterror.png)
+![](/images/kivykor/disterror.png)
 
 검색을 하다가 좀 더 아시는 분인 것 같아 물어봐놓은 상태..ㅠㅠ
 
