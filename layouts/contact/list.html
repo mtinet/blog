@@ -9,18 +9,19 @@
         
         <!-- 📨 이메일 폼 -->
         <form id="contact-form" class="row mt-5">
-            <div class="col-lg-6">
-                <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name" required>
-            </div>
-            <div class="col-lg-6">
-                <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email" required>
-            </div>
-            <div class="col-12">
-                <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..." required></textarea>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+          <div class="col-lg-6">
+              <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name" required>
+          </div>
+          <div class="col-lg-6">
+              <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="col-12">
+              <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..." required></textarea>
+          </div>
+          <div class="col-12">
+              <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+              <p id="loading-message" style="display: none; color: blue;">📨 메일을 보내는 중...</p>
+          </div>
         </form>
         
         <script>
@@ -28,9 +29,16 @@
             document.getElementById("contact-form").addEventListener("submit", function (event) {
                 event.preventDefault(); // 기본 폼 제출 방지
         
+                const submitButton = document.getElementById("submit-btn");
+                const loadingMessage = document.getElementById("loading-message");
+        
+                // ✅ 버튼 비활성화 + 로딩 메시지 표시
+                submitButton.disabled = true;
+                loadingMessage.style.display = "block";
+        
                 const formData = new FormData(this);
         
-                fetch("https://script.google.com/macros/s/AKfycbxEKBajtt71D09Hms61yKAA__s7YXvdUJ-pLOMBu1sS3_u6wl0eVUfSsX8Sg1kLIK34Ew/exec", {
+                fetch("https://script.google.com/macros/s/AKfycby.../exec", {
                     method: "POST",
                     body: formData
                 })
@@ -42,12 +50,15 @@
                 .catch(error => {
                     console.error("Error:", error);
                     alert("❌ 메일 전송에 실패했습니다.");
+                })
+                .finally(() => {
+                    // ✅ 버튼 다시 활성화 + 로딩 메시지 숨김
+                    submitButton.disabled = false;
+                    loadingMessage.style.display = "none";
                 });
             });
         });
         </script>
-
-
       </div>
     </div>
   </div>
