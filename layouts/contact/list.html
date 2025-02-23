@@ -40,10 +40,9 @@
     form.addEventListener("submit", function (event) {
       event.preventDefault(); // 기본 폼 제출 동작 방지
   
-      const formData = new FormData(form);
       const actionURL = form.getAttribute("action");
-  
-      // ✅ 새 창을 먼저 열기 (새 탭 강제 생성)
+      
+      // ✅ 새 창을 먼저 열기 (빈 HTML 문서)
       const sendMailWindow = window.open("", "sendMailWindow", "width=500,height=400");
   
       if (!sendMailWindow) {
@@ -51,33 +50,32 @@
         return;
       }
   
-      // ✅ 새 창에서 Google Apps Script에 폼 데이터 자동 제출
+      // ✅ 새 창에서 Google Apps Script로 데이터를 직접 제출
       sendMailWindow.document.write(`
         <html>
           <head><title>메일 전송 중...</title></head>
-          <body>
+          <body onload="document.getElementById('emailForm').submit();">
             <p>메일을 보내는 중입니다. 잠시만 기다려 주세요...</p>
             <form id="emailForm" action="${actionURL}" method="POST">
               <input type="hidden" name="name" value="${form.name.value}">
               <input type="hidden" name="email" value="${form.email.value}">
               <input type="hidden" name="message" value="${form.message.value}">
             </form>
-            <script>
-              document.getElementById("emailForm").submit();
-            </script>
           </body>
         </html>
       `);
       sendMailWindow.document.close();
   
       // ✅ 새 창이 닫히는 것을 감지하고 Contact 페이지 새로고침
-      window.addEventListener("message", function (event) {
-        if (event.data === "emailSent") {
-          window.location.reload();  // Contact 페이지 새로고침
+      const checkWindowClosed = setInterval(() => {
+        if (sendMailWindow.closed) {
+          clearInterval(checkWindowClosed); // 감시 중지
+          window.location.reload(); // Contact 페이지 새로고침
         }
-      });
+      }, 500);
     });
   });
+
 </script>
 
 
