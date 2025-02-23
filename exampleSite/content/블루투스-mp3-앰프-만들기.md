@@ -1,12 +1,11 @@
-+++
-categories = ["make"]
-date = 2020-03-01T15:00:00Z
-description = "휴대폰 블루투스로 제어가 되는 앰프"
-image = "/images/bluetoothmp3/20190704_190303.jpg"
-tags = ["mp3", " bluetooth"]
-title = "블루투스 mp3 앰프 만들기"
-type = "post"
-
++++  
+categories = ["make"]  
+date = 2020-03-01T15:00:00Z  
+description = "휴대폰 블루투스로 제어가 되는 앰프"  
+image = "/images/bluetoothmp3/20190704_190303.jpg"  
+tags = ["mp3", " bluetooth"]  
+title = "블루투스 mp3 앰프 만들기"  
+type = "post"  
 +++  
 
 이건 뭐 그냥 블루투스 mp3 모듈 사다가 조립만 하면 된다. 휴대폰 블루투스로 제어가 되고, 생각보다 앰프 수준이 상당해서 교실 방송용 스피커 수준을 충분히 커버한다.
