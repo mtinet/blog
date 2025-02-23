@@ -35,10 +35,15 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector(".gfrom").addEventListener("submit", async function (event) {
-          event.preventDefault(); // 기본 폼 제출 방지
-          await fetch(this.getAttribute("action"), { method: "POST", body: new FormData(this) });
-      });
+      setTimeout(() => {
+          const form = document.querySelector(".gfrom");
+          if (!form) return; // ✅ 폼이 없으면 실행하지 않음
+  
+          form.addEventListener("submit", async function (event) {
+              event.preventDefault();
+              await fetch(this.getAttribute("action"), { method: "POST", body: new FormData(this) });
+          });
+      }, 500); // ✅ 0.5초 후 실행하여 요소가 로드되도록 함
   });
 </script>
 
