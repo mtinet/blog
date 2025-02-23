@@ -1,13 +1,13 @@
-+++
-categories = ["programming"]
-date = 2020-03-08T15:00:00Z
-description = "python GUI라이브러리인 kivy에서 한글이 나오게 하는 방법"
-image = "/images/kivykor/kivyKorean.png"
-tags = ["python", "kivy", "한글", "윈도우"]
-title = "kivy 한글 폰트 설치하기"
-type = "post"
++++  
+categories = ["programming"]  
+date = 2020-03-08T15:00:00Z  
+description = "python GUI라이브러리인 kivy에서 한글이 나오게 하는 방법"  
+image = "/images/kivykor/kivyKorean.png"  
+tags = ["python", "kivy", "한글", "윈도우"]  
+title = "kivy 한글 폰트 설치하기"  
+type = "post"  
++++  
 
-+++
 ##### python 기본 설치 위치
 
 C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
