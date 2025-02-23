@@ -1,13 +1,13 @@
-+++
-categories = ["login", "kivy", "python"]
-date = 2020-03-06T15:00:00Z
-description = "kivy라이브러리를 이용해 GUI형태의 로그인 창 만들기"
-image = "/images/kivylogin/kivy1.png"
-tags = ["python", "kivy", "login"]
-title = "python으로 login 시스템 만들기(feat.kivy)"
-type = "post"
++++  
+categories = ["login", "kivy", "python"]  
+date = 2020-03-06T15:00:00Z  
+description = "kivy라이브러리를 이용해 GUI형태의 로그인 창 만들기"  
+image = "/images/kivylogin/kivy1.png"  
+tags = ["python", "kivy", "login"]  
+title = "python으로 login 시스템 만들기(feat.kivy)"  
+type = "post"  
++++  
 
-+++
 ##### 설치
 
 * kivy 라이브러리 설치
