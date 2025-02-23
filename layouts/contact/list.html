@@ -35,46 +35,42 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".gfrom");
+      const form = document.querySelector(".gfrom");
   
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // 기본 폼 제출 동작 방지
+      form.addEventListener("submit", async function (event) {
+          event.preventDefault(); // 기본 폼 제출 방지
   
-      const actionURL = form.getAttribute("action");
-      
-      // ✅ 새 창을 먼저 열기 (빈 HTML 문서)
-      const sendMailWindow = window.open("", "sendMailWindow", "width=500,height=400");
+          const formData = new FormData(form);
+          const actionURL = form.getAttribute("action");
   
-      if (!sendMailWindow) {
-        alert("❌ 팝업 차단이 감지되었습니다. 팝업을 허용해주세요.");
-        return;
-      }
+          try {
+              let response = await fetch(actionURL, {
+                  method: "POST",
+                  body: formData
+              });
   
-      // ✅ 새 창에서 Google Apps Script로 데이터를 직접 제출
-      sendMailWindow.document.write(`
-        <html>
-          <head><title>메일 전송 중...</title></head>
-          <body onload="document.getElementById('emailForm').submit();">
-            <p>메일을 보내는 중입니다. 잠시만 기다려 주세요...</p>
-            <form id="emailForm" action="${actionURL}" method="POST">
-              <input type="hidden" name="name" value="${form.name.value}">
-              <input type="hidden" name="email" value="${form.email.value}">
-              <input type="hidden" name="message" value="${form.message.value}">
-            </form>
-          </body>
-        </html>
-      `);
-      sendMailWindow.document.close();
+              let result = await response.text();  // JSON 대신 텍스트로 처리
   
-      // ✅ 새 창이 닫히는 것을 감지하고 Contact 페이지 새로고침
-      const checkWindowClosed = setInterval(() => {
-        if (sendMailWindow.closed) {
-          clearInterval(checkWindowClosed); // 감시 중지
-          window.location.reload(); // Contact 페이지 새로고침
-        }
-      }, 500);
-    });
+              // ✅ Google Apps Script가 JSON 응답을 반환하면 파싱
+              try {
+                  result = JSON.parse(result);
+              } catch (e) {
+                  console.warn("응답이 JSON 형식이 아님:", result);
+              }
+  
+              if (result.status === "success") {
+                  alert("✅ 메일이 성공적으로 전송되었습니다!");
+                  window.location.reload(); // ✅ Contact 페이지 새로고침
+              } else {
+                  alert("❌ 메일 전송 실패: " + (result.message || "알 수 없는 오류"));
+              }
+          } catch (error) {
+              console.error("Error:", error);
+              alert("❌ 메일 전송 중 오류 발생. 다시 시도해주세요.");
+          }
+      });
   });
+
 </script>
 
 
