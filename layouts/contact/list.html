@@ -2,76 +2,63 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
+      <div class="col-lg-12">
         <h2 class="mb-4">{{.Title }}</h2>
         <img src="{{.Params.Image | absURL }}" alt="{{.Site.Params.author}}" class="img-fluid w-100 mb-4">
         {{ .Content }}
-
+        
         <!-- 📨 이메일 폼 -->
         <form id="contact-form" class="row mt-5">
           <div class="col-lg-6">
-              <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Your Name" required>
+              <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name" required>
           </div>
           <div class="col-lg-6">
-              <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Your Email" required>
+              <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email" required>
           </div>
           <div class="col-12">
-              <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message..." required></textarea>
+              <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..." required></textarea>
           </div>
-          <div class="col-12 text-center">
-              <button type="submit" id="submit-btn" class="btn btn-primary px-4 py-2">
-                  <span id="btn-text">📨 Send Message</span>
-                  <span id="loading-icon" class="spinner-border spinner-border-sm d-none"></span>
-              </button>
-              <p id="loading-message" class="mt-2 text-info d-none">⏳ Sending your message...</p>
+          <div class="col-12">
+              <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+              <p id="loading-message" style="display: none; color: blue;">📨 메일을 보내는 중...</p>
           </div>
         </form>
-
+        
         <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contact-form");
-            const submitButton = document.getElementById("submit-btn");
-            const btnText = document.getElementById("btn-text");
-            const loadingIcon = document.getElementById("loading-icon");
-            const loadingMessage = document.getElementById("loading-message");
-
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                // ✅ 버튼 비활성화 + 로딩 UI 표시
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // 기본 폼 제출 방지
+        
+                const submitButton = document.getElementById("submit-btn");
+                const loadingMessage = document.getElementById("loading-message");
+        
+                // ✅ 버튼 비활성화 + 로딩 메시지 표시
                 submitButton.disabled = true;
-                submitButton.classList.add("disabled");
-                btnText.textContent = "Sending...";
-                loadingIcon.classList.remove("d-none");
-                loadingMessage.classList.remove("d-none");
-
+                loadingMessage.style.display = "block";
+        
                 const formData = new FormData(this);
-
+        
                 fetch("https://script.google.com/macros/s/AKfycbxEKBajtt71D09Hms61yKAA__s7YXvdUJ-pLOMBu1sS3_u6wl0eVUfSsX8Sg1kLIK34Ew/exec", {
                     method: "POST",
                     body: formData
                 })
                 .then(response => response.text())
                 .then(data => {
-                    alert("✅ Your message has been sent successfully!");
-                    window.location.href = "https://mtinet.cc/contact"; // ✅ 페이지 이동
+                    alert("✅ 메일이 성공적으로 전송되었습니다!");
+                    window.location.href = "https://mtinet.cc/contact"; // ✅ 현재 창에서 contact 페이지로 이동
                 })
                 .catch(error => {
                     console.error("Error:", error);
-                    alert("❌ Failed to send message. Please try again.");
+                    alert("❌ 메일 전송에 실패했습니다.");
                 })
                 .finally(() => {
-                    // ✅ 버튼 다시 활성화 + 로딩 UI 숨김
+                    // ✅ 버튼 다시 활성화 + 로딩 메시지 숨김
                     submitButton.disabled = false;
-                    submitButton.classList.remove("disabled");
-                    btnText.textContent = "📨 Send Message";
-                    loadingIcon.classList.add("d-none");
-                    loadingMessage.classList.add("d-none");
+                    loadingMessage.style.display = "none";
                 });
             });
         });
         </script>
-
       </div>
     </div>
   </div>
