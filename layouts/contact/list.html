@@ -34,32 +34,32 @@
 </section>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".gfrom");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // 기본 폼 제출 동작 방지
-
-    const formData = new FormData(form);
-    const actionURL = form.getAttribute("action");
-
-    fetch(actionURL, {
-      method: "POST",
-      body: formData,
-      mode: "cors"  // ✅ CORS 문제 해결을 위해 "cors" 모드 추가
-    })
-    .then(response => response.text())
-    .then(data => {
-      console.log("Success:", data);
-      alert("✅ 메일이 성공적으로 전송되었습니다!");
-      form.reset(); // 폼 초기화 (입력 내용 삭제)
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("❌ 메일 전송에 실패했습니다.");
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".gfrom");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // 기본 폼 제출 동작 방지
+  
+      const formData = new FormData(form);
+      const actionURL = form.getAttribute("action");
+  
+      fetch(actionURL, {
+        method: "POST",
+        body: formData,
+        mode: "cors"  // ✅ CORS 문제 해결을 위해 "cors" 모드 추가
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log("Success:", data);
+        alert("✅ 메일이 성공적으로 전송되었습니다!");
+        form.reset(); // 폼 초기화 (입력 내용 삭제)
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("❌ 메일 전송에 실패했습니다.");
+      });
     });
   });
-});
 </script>
 
 
