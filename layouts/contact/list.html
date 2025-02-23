@@ -18,26 +18,50 @@
           <div class="col-12">
               <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..." required></textarea>
           </div>
-          <div class="col-12">
-              <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
-              <p id="loading-message" style="display: none; color: blue;">📨 메일을 보내는 중...</p>
+          <div class="col-12 text-center">
+              <button type="submit" id="submit-btn" class="btn btn-primary px-4 py-2">
+                  📩 Send Message
+              </button>
+              <p id="loading-message" class="mt-2">📨 메일을 보내는 중...</p>
           </div>
         </form>
-        
+
+        <style>
+          /* 📌 로딩 메시지 애니메이션 */
+          #loading-message {
+              display: none;
+              color: #007bff;
+              font-weight: bold;
+              animation: fadeInOut 1s infinite alternate;
+          }
+          
+          @keyframes fadeInOut {
+              0% { opacity: 0.3; }
+              100% { opacity: 1; }
+          }
+
+          /* 📌 버튼 비활성화 스타일 */
+          #submit-btn:disabled {
+              background-color: gray;
+              cursor: not-allowed;
+          }
+        </style>
+
         <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("contact-form").addEventListener("submit", function (event) {
-                event.preventDefault(); // 기본 폼 제출 방지
-        
-                const submitButton = document.getElementById("submit-btn");
-                const loadingMessage = document.getElementById("loading-message");
-        
-                // ✅ 버튼 비활성화 + 로딩 메시지 표시
+            const form = document.getElementById("contact-form");
+            const submitButton = document.getElementById("submit-btn");
+            const loadingMessage = document.getElementById("loading-message");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // ✅ 버튼 비활성화 + 로딩 UI 표시
                 submitButton.disabled = true;
                 loadingMessage.style.display = "block";
-        
+
                 const formData = new FormData(this);
-        
+
                 fetch("https://script.google.com/macros/s/AKfycbxEKBajtt71D09Hms61yKAA__s7YXvdUJ-pLOMBu1sS3_u6wl0eVUfSsX8Sg1kLIK34Ew/exec", {
                     method: "POST",
                     body: formData
