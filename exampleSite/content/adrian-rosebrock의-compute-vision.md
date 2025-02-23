@@ -7,7 +7,7 @@ tags = ["AI", " compute vision", "adrian rosebrock", "번역"]
 title = "Adrian Rosebrock의 Compute Vision"
 type = "post"
 
-+++
++++  
 [https://www.pyimagesearch.com/start-here/](https://www.pyimagesearch.com/start-here/ "https://www.pyimagesearch.com/start-here/")
 
 Adrian Rosebrock의 Compute Vision AI에 대한 번역을 하기 위해 주소를 기록해놓음... 
