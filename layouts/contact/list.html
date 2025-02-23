@@ -43,19 +43,19 @@
       const formData = new FormData(form);
       const actionURL = form.getAttribute("action");
   
-      // ✅ 새 창에서 메일 전송
+      // ✅ 새 창에서 메일 전송 (폭 500px, 높이 300px)
       const sendMailWindow = window.open(actionURL, "sendMailWindow", "width=500,height=300");
   
-      // ✅ 새 창에서 이메일을 보내도록 form 데이터를 전송
       fetch(actionURL, {
         method: "POST",
         body: formData
       })
       .then(() => {
-        // ✅ 새 창을 닫고 원래 페이지 새로고침 (Google Apps Script에서도 처리됨)
+        alert("✅ 메일이 성공적으로 전송되었습니다!"); // ✅ 성공 메시지 표시
         if (sendMailWindow) {
-          sendMailWindow.close();
+          sendMailWindow.close(); // ✅ 새 창 닫기
         }
+        window.location.reload(); // ✅ Contact 페이지 새로고침
       })
       .catch(() => {
         alert("❌ 메일 전송에 실패했습니다. 다시 시도해주세요.");
@@ -65,6 +65,7 @@
       });
     });
   });
+
 </script>
 
 
