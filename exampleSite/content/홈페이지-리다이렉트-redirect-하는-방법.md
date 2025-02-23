@@ -1,13 +1,13 @@
-+++
-categories = ["HTML"]
-date = 2020-03-01T15:00:00Z
-description = "홈페이지 주소가 여러개일 때 한 쪽 주소로 자동으로 이동하게 하는 방법"
-image = "/images/redirect/redirect.png"
-tags = [" redirect", "HTML"]
-title = "홈페이지 리다이렉트(redirect) 하는 방법"
-type = "post"
++++  
+categories = ["HTML"]  
+date = 2020-03-01T15:00:00Z  
+description = "홈페이지 주소가 여러개일 때 한 쪽 주소로 자동으로 이동하게 하는 방법"  
+image = "/images/redirect/redirect.png"  
+tags = [" redirect", "HTML"]  
+title = "홈페이지 리다이렉트(redirect) 하는 방법"  
+type = "post"  
++++  
 
-+++
 블로그를 하거나 홈페이지가 여러개가 만들어졌을 때 이전 주소로 들어오게 되는 사람들이 혼란을 겪지 않게 하기 위해서는 '리다이렉트' 작업을 해주는게 좋다.
 
 홈페이지에 사람들이 접속하게 되면 자동으로 index.html 파일을 열도록 설정되어 있는데, 그 파일의 <head></head> 태그 사이에 아래 코드를 추가 하면 해당 주소로 자동 리다이렉트 된다.
