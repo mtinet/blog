@@ -12,7 +12,7 @@ type = "post"
 
 C:\\Users\\**사용자 계정**\\AppData\\Local\\Programs\\Python\\Python37
 
-##### python에서 직접 설치 위치를 확인하는 방법z
+##### python에서 직접 설치 위치를 확인하는 방법
 
 ![](/images/locationCheck.png)
 
