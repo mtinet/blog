@@ -15,7 +15,7 @@ weight = 3
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 [params]
-address = "5, Deungyong-ro 8-gil, Dongjak-gu, Seoul, Republic of Korea"
+address = "85, Daebangdong 27-gil, Dongjak-gu, Seoul, Republic of Korea"
 author = "Jason"
 author_image = "images/20200301_130952.jpg"
 bio = "Technology Teacher on S.Korea"
