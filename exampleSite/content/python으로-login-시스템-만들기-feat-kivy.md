@@ -2,7 +2,7 @@
 categories = ["login", "kivy", "python"]
 date = 2020-03-06T15:00:00Z
 description = "kivy라이브러리를 이용해 GUI형태의 로그인 창 만들기"
-image = "/images/kivy1.png"
+image = "/images/kivylogin/kivy1.png"
 tags = ["python", "kivy", "login"]
 title = "python으로 login 시스템 만들기(feat.kivy)"
 type = "post"
@@ -41,16 +41,16 @@ users.txt : 데이터베이스 파일에 의해 데이터가 저장되는 파일
 ##### 사용방법
 
 계정이 있으면 로그인을 하고, 없으면 계정을 만드는 창으로 이동한다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy1.png?raw=true)
+![](images/kivylogin/kivy1.png?raw=true)
 
 계정을 만들 수 있는 창에서 계정을 만들고 서밋을 하면 자동으로 로그인 창으로 이동한다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy2.png?raw=true)
+![](images/kivylogin/kivy2.png?raw=true)
 
 로그인을 하고나면 로그인 정보를 확인할 수 있는 창을 보여준다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy3.png?raw=true)
+![](images/kivylogin/kivy3.png?raw=true)
 
 만약 로그인 정보가 바르지 않으면 정보가 잘못되었음을 보여주는 팝업을 띄운다.
-![](https://github.com/mtinet/blog/blob/master/exampleSite/static/images/kivy4.png?raw=true)
+![](images/kivylogin/kivy4.png?raw=true)
 
 ##### 소개
 
