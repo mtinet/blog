@@ -1,11 +1,11 @@
-+++
-categories = ["graph", "python"]
-date = 2020-03-01T15:00:00Z
-description = "파이썬으로 그래프를 그려보다."
-image = "/images/pythongraph/1101_temp.png"
-tags = ["python", "graph", "plt", "matplotlib", "csv"]
-title = "python으로 그래프 그리기"
-type = "post"
++++  
+categories = ["graph", "python"]  
+date = 2020-03-01T15:00:00Z  
+description = "파이썬으로 그래프를 그려보다."  
+image = "/images/pythongraph/1101_temp.png"  
+tags = ["python", "graph", "plt", "matplotlib", "csv"]  
+title = "python으로 그래프 그리기"  
+type = "post"  
 +++  
   
 옆의 그래프는 파이썬으로 그린 그래프이다. 79년 11월 1일부터 지금까지 매년 11월 1일의 최고온도와 최저온도를 그래프로 그리는 작업을 해보았다. 
