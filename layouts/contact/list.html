@@ -43,24 +43,32 @@
       const formData = new FormData(form);
       const actionURL = form.getAttribute("action");
   
-      // ✅ 새 창에서 메일 전송 (폭 500px, 높이 300px)
-      const sendMailWindow = window.open(actionURL, "sendMailWindow", "width=500,height=300");
+      // ✅ 새 창을 먼저 열기 (빈 페이지)
+      const sendMailWindow = window.open("", "sendMailWindow", "width=500,height=300");
   
-      fetch(actionURL, {
-        method: "POST",
-        body: formData
-      })
-      .then(() => {
-        alert("✅ 메일이 성공적으로 전송되었습니다!"); // ✅ 성공 메시지 표시
-        if (sendMailWindow) {
-          sendMailWindow.close(); // ✅ 새 창 닫기
-        }
-        window.location.reload(); // ✅ Contact 페이지 새로고침
-      })
-      .catch(() => {
-        alert("❌ 메일 전송에 실패했습니다. 다시 시도해주세요.");
-        if (sendMailWindow) {
-          sendMailWindow.close();
+      // ✅ 새 창에서 메일 전송 페이지를 로드하고, 폼 데이터를 전달
+      sendMailWindow.document.write(`
+        <html>
+          <head><title>메일 전송 중...</title></head>
+          <body>
+            <p>메일을 보내는 중입니다. 잠시만 기다려 주세요...</p>
+            <form id="emailForm" action="${actionURL}" method="POST">
+              <input type="hidden" name="name" value="${form.name.value}">
+              <input type="hidden" name="email" value="${form.email.value}">
+              <input type="hidden" name="message" value="${form.message.value}">
+            </form>
+            <script>
+              document.getElementById("emailForm").submit();
+            </script>
+          </body>
+        </html>
+      `);
+      sendMailWindow.document.close();
+  
+      // ✅ 새 창이 닫히는 것을 감지하고 원래 페이지 새로고침
+      window.addEventListener("message", function (event) {
+        if (event.data === "emailSent") {
+          window.location.reload();  // Contact 페이지 새로고침
         }
       });
     });
