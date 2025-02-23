@@ -1,17 +1,11 @@
 +++  
-title: 블랙독  
-date: 2020-04-15T02:32:00+09:00  
-description: 블랙독  
-type: featured  
-image: "/images/blackdog/blackdog.png"  
-categories:  
-- Drama  
-tags:  
-- 블랙독  
-- " 드라마"  
-- " 서현진"  
-- 학교  
-- 교육  
+title = 블랙독  
+date = 2020-04-15T02:32:00+09:00  
+description = 블랙독  
+type = featured  
+image = "/images/blackdog/blackdog.png"  
+categories = ["Drama"]
+tags: ["드라마", "서현진", "학교", "교육"]  
 +++  
   
 블랙독 3부, 18분 24초
