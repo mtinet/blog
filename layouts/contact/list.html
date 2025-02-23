@@ -43,10 +43,15 @@
       const formData = new FormData(form);
       const actionURL = form.getAttribute("action");
   
-      // ✅ 새 창을 먼저 열기 (빈 페이지)
-      const sendMailWindow = window.open("", "sendMailWindow", "width=500,height=300");
+      // ✅ 새 창을 먼저 열기 (새 탭 강제 생성)
+      const sendMailWindow = window.open("", "sendMailWindow", "width=500,height=400");
   
-      // ✅ 새 창에서 메일 전송 페이지를 로드하고, 폼 데이터를 전달
+      if (!sendMailWindow) {
+        alert("❌ 팝업 차단이 감지되었습니다. 팝업을 허용해주세요.");
+        return;
+      }
+  
+      // ✅ 새 창에서 Google Apps Script에 폼 데이터 자동 제출
       sendMailWindow.document.write(`
         <html>
           <head><title>메일 전송 중...</title></head>
@@ -65,7 +70,7 @@
       `);
       sendMailWindow.document.close();
   
-      // ✅ 새 창이 닫히는 것을 감지하고 원래 페이지 새로고침
+      // ✅ 새 창이 닫히는 것을 감지하고 Contact 페이지 새로고침
       window.addEventListener("message", function (event) {
         if (event.data === "emailSent") {
           window.location.reload();  // Contact 페이지 새로고침
@@ -73,7 +78,6 @@
       });
     });
   });
-
 </script>
 
 
